@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update</title>
+    <link rel="stylesheet" href="static/style.css" />
+</head>
+<body>
+    {% include 'header.html' %}
+    
+
+    {% if not sucesso %}
+
+    <div class="bloco">
+        <h2> Editar atividade</h2> <span id="editar">{{registro.id}}</span>
+    </div>
+
+    <div class="bloco">
+        <form class = "form" method = "POST">
+            <div class = "bloco form_input">
+                <label for = "atividade">Atividade: </label>
+                <input type="text" id = "atividade" name = "atividade" placeholder="{{registro.atividade}}">
+            </div>
+            <div class = "bloco form_input">
+                <label for = "prazo">Prazo [dd/mm/aaaa]: </label>
+                <input type="text" id = "prazo" name = "prazo" placeholder="{{registro.prazo}}">
+            </div>
+            <div class = "bloco form_input">
+                <label for = "observacoes">Observações: </label>
+                <input type="text" id = "observacoes" name = "observacoes" placeholder="{{registro.observacoes}}">
+            </div>
+            <div class = "bloco form_input" id="enviar">
+                <input type="submit" class = "botao" value = "Enviar">
+            </div>              
+        </form>
+    </div>
+
+    {% else %}
+
+    <div class = "bloco_sucesso">
+        <p>
+            Atividade <span class="novo_id">{{ registro.id }}</span> atualizada com sucesso!<br></br>
+
+        </p>
+    </div>
+
+    {% endif%}
+
+    <div class="bloco">
+        <a href = "javascript:history.back()" class = botao >Voltar</a>
+    </div>
+</body>
+</html>
+
