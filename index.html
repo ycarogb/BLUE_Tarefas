@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" type = "text/css" href="static/style.css" />
+    <title>Projeto CRUD com HTML, CSS, JS, Python (Flask) e SQL</title>
+</head>
+<body>
+    {% include 'header.html' %}
+
+    <div class = "bloco_principal">
+        <a href="/segunda" class="botao">Segunda-Feira</a>
+        <a href="/terca" class="botao">Terça-Feira</a>
+        <a href="/quarta" class="botao">Quarta-Feira</a>
+    </div>
+
+    <div class = "bloco_principal">
+        <a href="/quinta" class="botao">Quinta-Feira</a>
+        <a href="/sexta" class="botao">Sexta-Feira</a>
+        <a href="/sabado" class="botao">Sábado</a>
+    </div>
+
+    <div class = "bloco_domingo">
+            <a href="/domingo" class="botao">Domingo</a>
+            <form class = "form" methods = "POST"> 
+                <label for="nota">Anotações: </label><input type = "text" id = "nota" name="nota" placeholder="Digite aqui...">
+            </form>
+    </div>
+
+    
+</body>
+</html>
