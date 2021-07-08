@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create</title>
+    <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+    {% include 'header2.html' %}
+    
+    <div class="bloco">
+        <h2> Criar registros</h2>
+    </div>
+
+    {% if not novo_idtarefa %}
+
+    <div class="bloco">
+        <form class = "form" method = "POST">
+            <div class = "bloco form_input">
+                <label for = "tarefa">Tarefa: </label>
+                <input type="text" id = "tarefa" name = "tarefa">
+            </div>
+            <div class = "bloco form_input">
+                <label for = "dtagendamento">Prazo [dd/mm/aaaa]: </label>
+                <input type="date" id = "dtagendamento" name = "dtagendamento">
+            </div>
+            <div class = "bloco form_input">
+                <label for = "observacao">Observações: </label>
+                <input type="text" id = "observacao" name = "observacao">
+            </div>
+            <div class = "bloco form_input">
+                <p style="font-weight: bold;">Agendar para: </p>
+            </div>
+            <div class = bloco_opcoes>
+                <div>
+                    <label for="seg"> Segunda </label><input type="radio" name = "dia" id = "segunda" value= "seg" />
+                </div>
+                <div> 
+                    <label for="ter"> Terça </label><input type="radio" name = "dia" id = "terca"  value= "ter" />
+                </div>
+                <div> 
+                    <label for="qua"> Quarta </label><input type="radio" name = "dia" id = "quarta"  value= "qua" />
+                </div>
+                <div> 
+                    <label for="qui"> Quinta </label><input type="radio" name = "dia" id = "quinta"  value= "qui" />
+                </div>
+                <div> 
+                    <label for="sex"> Sexta </label><input type="radio" name = "dia" id = "sexta"  value= "sex" />
+                </div>
+                <div> 
+                    <label for="sab"> Sábado </label><input type="radio" name = "dia" id = "sabado"  value= "sab" />
+                </div>
+                <div> 
+                    <label for="dom"> Domingo </label><input type="radio" name = "dia" id = "domingo"  value= "dom" />
+                </div>
+            </div>    
+            <div class = "bloco form_input" id="enviar">
+                <input type="submit" class = "botao" value = "Enviar">
+            </div>              
+        </form>
+    </div>
+
+    {% else %}
+
+    <div class = "bloco_sucesso">
+        <p>
+            Tarefa criada com sucesso!<br></br>
+
+        </p>
+    </div>
+
+    {% endif%}
+
+</body>
+</html>
+

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anotações</title>
+    <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+    {% include 'header2.html' %}
+    
+    <div class="bloco">
+        <h2>Visualizar todos os registros</h2>
+    </div>
+
+    <div class="bloco">
+        <table class="tabela">
+            <tr class="tabela_header">
+                <td>Anotações</td>
+            </tr>
+
+            {% for registro in registros %}
+
+            <tr>
+                <td>{{ registro["anotacao"] }}</td>
+                <td><a href="/delete_anotacoes/{{ registro['id'] }}" class="botao">Remover anotação</a></td>
+            </tr>
+
+            {% endfor %}
+        </table>
+    </div>
+</body>
+</html>

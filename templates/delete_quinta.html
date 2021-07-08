@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete_quinta</title>
+    <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+    {% include 'header2.html' %}
+    
+
+    {%if sucesso %}
+        <div class="registro_removido">
+            <p>
+                Tarefa Removida com sucesso!
+            </p>
+        </div>
+    {% elif registro %}
+
+    <div class="bloco">
+        <h2> Remover tarefa </h2> <span id="editar">{{registro.idtarefa}}</span>
+    </div>
+
+    <div class = "bloco_sucesso">
+        <p>
+            Tem certeza que deseja remover a tarefa <span class="novo_id">{{ registro.tarefa }}</span>?
+            <br />
+            <div class = "botao_remover">
+            <a href="/quinta" class = "botao">Cancelar</a>
+            <a href="/delete_quinta/{{registro.idtarefa}}/confirmed" class = "botao">Remover</a>
+            </div>
+        </p>
+    </div>
+
+    {% else %}
+    <div class = "bloco_sucesso">
+        <p>
+           Nenhuma tarefa encontrada!
+        </p>
+
+    {% endif%}
+    </div>
+
+    <div class="bloco">
+        <a href = "/quinta" class = botao >Ver atividades</a>
+    </div>
+</body>
+</html>
+

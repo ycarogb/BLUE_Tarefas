@@ -1,0 +1,208 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+body {
+    background-color: #59c9ee;
+    font-family: "Montserrat", sans-serif;
+    margin: 0;
+    padding: 20px 0;
+}
+
+.header{
+    padding-top: 20px;
+    background: #ededed;
+    font-weight: bold;
+}
+
+.bloco{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.bloco_imagem{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bloco_botoes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.botao{
+    background-color: #ff0066;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+    display: inline-block;
+    padding: 20px;
+    margin: 10px;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.796);
+}
+
+.botao:hover{
+    background-color: yellow;
+    transition: 0.25s;
+}
+
+.tabela{
+    border: 1px solid black;
+    border-spacing: 0;
+    margin: 0 50px 20px;
+    width: 100%;
+}
+
+.tabela tr:nth-child(even) td{
+    background-color: white;
+}
+
+.tabela td{
+    padding: 10px;
+}
+
+.tabela_header td{
+    font-weight: bold;
+}
+
+#imagemSingle{
+    max-height: 400px;
+}
+
+.form{
+    width: 600px;
+}
+
+.form_input{
+    align-items: center;
+    justify-content: space-between;
+}
+
+.form_input label{
+    font-weight: bold;
+    padding-right: 10px;
+}
+
+.form_input input[type=text]{
+    width: 400px;
+    padding: 6px;
+    margin: 6px 0;
+    display: inline-block;
+    border-radius: 4px;
+    border: 1px solid #cccc;
+    box-sizing: border-box;
+}
+
+.form_input input [type=submit]{
+    width: 400px;
+    padding: 6px;
+    margin: 6px 0;
+    display: inline-block;
+    box-sizing: border-box;
+}
+
+.novo_id{
+    background: #ff0066;
+    border-radius: 5px;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 5px 10px;
+}
+
+.bloco_principal{
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    align-items: center;
+    background-color: #59c9ee;
+    padding-bottom: 50px;
+}
+
+
+#opcao{
+    display: flex;
+    justify-content: space-around;
+    background-color: #75a3a3;
+    font-size: bold;
+}
+
+.bloco_opcoes{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-weight: bold;
+    margin-top: 10px;
+
+}
+
+.bloco_sucesso{
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+    color: #155724;
+    margin: 0 50px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.bloco_domingo{
+     display: flex;
+     flex-direction: row;
+     align-items: center;
+     justify-content: space-around;
+     background-color: #b3d7ff;
+     align-content: center;
+     padding-bottom: 50px;
+ }
+
+ #anotacao{
+     width: 500px;
+     height: 100px;
+ }
+
+ #enviar{
+     display: flex;
+     justify-content: center;
+ }
+
+ #editar{
+    background: #ff0066;
+    border-radius: 5px;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+
+ #observacoes{
+     padding-bottom: 80px;
+ }
+
+ .registro_removido{
+     display: flex;
+     justify-content: center;
+ }
+
+.botao_remover{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+}
+
+#editar{
+    display: flex;
+    width: 30px;
+    height: 40px;
+    margin-top: 15px;
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update</title>
+    <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+    {% include 'header2.html' %}
+    
+
+    {% if not sucesso %}
+
+    <div class="bloco">
+        <h2> Editar atividade</h2> <span id="editar">{{registro.idtarefa}}</span>
+    </div>
+
+    <div class="bloco">
+        <form class = "form" method = "POST">
+            <div class = "bloco form_input">
+                <label for = "tarefa">Atividade: </label>
+                <input type="text" id = "tarefa" name = "tarefa" placeholder="{{registro.tarefa}}">
+            </div>
+            <div class = "bloco form_input">
+                <label for = "dtagendamento">Prazo: </label>
+                <input type="date" id = "dtagendamento" name = "dtagendamento" placeholder="{{registro.dtagendamento}}">
+            </div>
+            <div class = "bloco form_input">
+                <label for = "observacao">Observações: </label>
+                <input type="text" id = "observacao" name = "observacao" placeholder="{{registro.observacao}}">
+            </div>
+            <div class = "bloco form_input" id="enviar">
+                <input type="submit" class = "botao" value = "Enviar">
+            </div>              
+        </form>
+    </div>
+
+    {% else %}
+
+    <div class = "bloco_sucesso">
+        <p>
+            Atividade <span class="novo_id">{{ registro.idtarefa }}</span> atualizada com sucesso!<br></br>
+
+        </p>
+    </div>
+
+    {% endif%}
+
+    <div class="bloco">
+        <a href = "/quinta" class = botao >Ver atividades</a>
+    </div>
+</body>
+</html>
