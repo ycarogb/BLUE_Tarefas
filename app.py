@@ -1,3 +1,5 @@
+#Equipe - Mayara Schimidt, Rafael Fonseca, Ycaro Batalha
+
 from flask import Flask, render_template, request
 from flask_sqlalchemy import SQLAlchemy
 
@@ -648,15 +650,19 @@ def delete_anotacao(id_registro):
         sucesso = True
     return render_template("delete_anotacoes.html", registro=registro)
 
-@app.route("/", methods=["POST", "GET"])
+@app.route("/")
 def index():
+    return render_template("index.html")
+
+@app.route("/enviar", methods=["GET", "POST"])
+def enviar():
 
     if request.method == "POST":
         form = request.form
         registro = Anotacoes(form['anotacao']) 
         registro.save_anotacao()
 
-    return render_template("index.html")
+    return render_template("index.html", registro=registro)
 
 if (__name__ == "__main__"):
     app.run(debug=True)
